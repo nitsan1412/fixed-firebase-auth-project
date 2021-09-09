@@ -1,4 +1,5 @@
 import React from 'react'
+import auth from '../auth';
 
 
 export default function AppLayout(props) {
@@ -7,9 +8,9 @@ export default function AppLayout(props) {
             App Layout
             <button
         onClick={() => {
-        //   auth.logout(() => {
-        //     props.history.push("/");
-        //   });
+          auth.logout(() => {
+            props.history.push("/");
+          });
         }}
       >off</button>
         </div>

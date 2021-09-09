@@ -40,10 +40,12 @@ export default class Login extends Component {
                   />
                 </Form.Group>
                 <Button
-                  onClick={() => {
-                      
+                  onClick={(e) => {
+                        e.preventDefault()
                         auth.login(this.emailRef.value,
-                          this.passwordRef.value)
+                          this.passwordRef.value, () =>   this.props.history.push("/app")
+                          )
+
                       
                   }}
                   variant="danger"
